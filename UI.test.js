@@ -1,8 +1,7 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('@playwright/test'); // Use the playwright for the User Interface testing
 
 test.describe('Login Page Tests', () => {
   test.beforeEach(async ({ page }) => {
-    // Replace with the actual URL where your login page is hosted
     await page.goto('http://127.0.0.1:5500');
   });
 
@@ -27,15 +26,11 @@ test.describe('Login Page Tests', () => {
     const emailInput = page.locator('#Email');
     const passwordInput = page.locator('#Pass');
 
-    // Fill in the form
+    // Fill in the form with the demo credintials 
     await emailInput.fill('admin@example.com');
     await passwordInput.fill('password123');
 
     // Simulate form submission
     await page.locator('input[value="SIGN IN"]').click();
-
-    // Validate the action after submission (mock response or page navigation)
-    // Example: Check if it navigates to a new page or shows a success message
-    // await expect(page).toHaveURL('/dashboard');
   });
 });
