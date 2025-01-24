@@ -1,3 +1,4 @@
+
 const { test, expect } = require('@playwright/test'); // Use playwright for the User Interface testing
 
 test.describe('Login Page Tests', () => {
@@ -6,7 +7,7 @@ test.describe('Login Page Tests', () => {
   });
 
   test('should render the login page correctly', async ({ page }) => {
-    // Check for the presence of key elements
+    // Check for the elements in page
     await expect(page.locator('h4')).toHaveText("Hello ADMIN ! let's get started");
     await expect(page.locator('#Email')).toBeVisible();
     await expect(page.locator('#Pass')).toBeVisible();
@@ -26,7 +27,7 @@ test.describe('Login Page Tests', () => {
     const emailInput = page.locator('#Email');
     const passwordInput = page.locator('#Pass');
 
-    // Fill in the form
+    // Fill in the form with the demo credintials 
     await emailInput.fill('admin@example.com');
     await passwordInput.fill('password123');
 
