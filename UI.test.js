@@ -6,7 +6,7 @@ test.describe('Login Page Tests', () => {
   });
 
   test('should render the login page correctly', async ({ page }) => {
-    // Check for the presence of key elements
+    // Check for the elements in page
     await expect(page.locator('h4')).toHaveText("Hello ADMIN ! let's get started");
     await expect(page.locator('#Email')).toBeVisible();
     await expect(page.locator('#Pass')).toBeVisible();
