@@ -1,4 +1,5 @@
-const { test, expect } = require('@playwright/test'); // Use the playwright for the User Interface testing
+
+const { test, expect } = require('@playwright/test'); // Use playwright for the User Interface testing
 
 test.describe('Login Page Tests', () => {
   test.beforeEach(async ({ page }) => {
@@ -32,5 +33,6 @@ test.describe('Login Page Tests', () => {
 
     // Simulate form submission
     await page.locator('input[value="SIGN IN"]').click();
+
   });
 });
